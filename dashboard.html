@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/sites_mainstyle.css">
+    <link rel="stylesheet" href="assets/css/theme-color/color.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+    <title>BRLF SURVEY</title>
+</head>
+<body>
+    <div class="container_warper p-0">
+        <section class="side_navs">
+            <div class="">
+                <div class="text-center py-4">
+                    <img class="logo_heights" src="./assets/images/site_logo.png" alt="">
+                </div>
+                <div class="">
+                    <nav class="side-nav">
+                        <ul class="">
+                          <li><a href="index.html">
+                            <div>
+                            <i class="fa fa-dashboard me-3"></i>
+                            <p>Dashboard</p>
+                            </div>
+                        </a>
+                        </li>
+                        <li><a href="index.html">
+                            <div>
+                            <i class="fa fa-dashboard me-3"></i>
+                            <p>Portfolio</p>
+                            </div>
+                        </a>
+                        </li>
+                          <li class="dorpdown-items"><a href="#">
+                            <div>
+                            <i class="fa fa-cog me-3"></i>
+                            <p class="text-white">setting </p>
+                            </div>
+                          <span class="fa fa-angle-down float-right"></span>
+                          <!-- <span class="fa fa-angle-down" aria-hidden="true"></span> -->
+                          </a>
+                            <ul class="dl">
+                              <li>
+                                <a href="index-1.html">
+                                    <div>
+                                <i class="pl_12 fa fa-dashboard me-3"></i>
+                                <p>Dashboard inn</p>
+                            </div>
+                                </a>
+                               </li>
+                               <li>
+                                <a href="index-1.html">
+                                    <div>
+                                <i class="pl_12 fa fa-dashboard me-3"></i>
+                                <p>Dashboard inn</p>
+                            </div>
+                                </a>
+                               </li>
+                            </ul>
+                          </li>
+                          
+                        </ul>
+                      </nav>
+                </div>
+            </div>
+        </section>
+        <section class="content_warper">
+            <div class="top_bar">
+                <div>
+                    <div class="d-lg-none pt-2">
+                        <img class="logo_heights mx-3" src="./assets/images/site_logo-cc.png" alt="">
+                        <button type="button" class="btn btn-light btn-sm side-nav-toggle me-3">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                </div>
+            </div>
+                <div class="">
+                    <div class="dropdown dropdown-menu-end">
+                        <button type="button" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+                          <img src="./assets/images/user.png" alt="">
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Link 1</a></li>
+                          <li><a class="dropdown-item" href="#">Link 2</a></li>
+                          <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+            <div class="container-fluid cont_height py-3">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card_radius card_shadow">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="dis_flax_sb">
+                                <h4>Survey List</h4>
+                                <button type="button" class="btn btn-success rounded-5 px-3">
+                                  <i class="fa-solid fa-plus"></i> Add Question
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="footer_section">
+                <small class="text-white">Copyright 2024- 2025© BRLF. All rights reserved</small>
+            </div>
+        </section>
+    </div>
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/all.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.side-nav-toggle').on('click', function(){
+            $('.side_navs').toggleClass('side-navs-open');
+            $('.content_warper').toggleClass('content-warper-sm');
+        });
+        $('nav.side-nav ul li.dorpdown-items').click(function(){
+            $(this).toggleClass('dorpdown-items-show');
+            $('nav.side-nav ul li.dorpdown-items a span').toggleClass('fa-angle-up')
+            if($('nav.side-nav ul li.dorpdown-items').hasClass('dorpdown-items-show')){
+              $('nav.side-nav ul li.dorpdown-items').removeClass('dorpdown-items-show')
+              $(this).addClass('dorpdown-items-show')
+            }
+            else{
+              $('nav.side-nav ul li.dorpdown-items').removeClass('dorpdown-items-show')
+            }
+            if($('nav.side-nav ul li.dorpdown-items a span').hasClass('fa-angle-down')){
+              $('nav.side-nav ul li.dorpdown-items a span').removeClass('fa-angle-down')
+              $('nav.side-nav ul li.dorpdown-items a span').addClass('fa-angle-up')
+            }
+            else{
+              $('nav.side-nav ul li.dorpdown-items a span').removeClass('fa-angle-up')
+              $('nav.side-nav ul li.dorpdown-items a span').addClass('fa-angle-down')
+            }
+          });
+        });
+</script>
+</body>
+</html>
